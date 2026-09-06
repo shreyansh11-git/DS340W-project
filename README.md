@@ -23,3 +23,19 @@ Source: Alpaca Market Data API (free tier), TSLA, 2016-01-01 to 2021-12-31.
 - [x] Data source identified and access verified
 - [ ] Phase 1 — reproduce the paper
 - [ ] Phase 2 — extension
+
+## Data splits
+Chronological (never shuffled - this is a time series). Validation is the most
+recent slice and is held out.
+
+| Split | Rows | % | Range |
+|---|---|---|---|
+| Train | 1057 | 70.0% | 2016-01-04 to 2020-03-16 |
+| Test | 302 | 20.0% | 2020-03-17 to 2021-05-26 |
+| Validation (held out) | 152 | 10.1% | 2021-05-27 to 2021-12-31 |
+
+Rebuild with `python src/make_splits.py`. Load with `src/data.py`, which refuses to
+serve the validation set unless `allow_holdout=True` is passed explicitly.
+
+KNOWN ISSUE: Tesla's 5-for-1 split (2020-08-31) falls inside the test window, and
+prices are raw/unadjusted. See the split-adjustment note before modelling.

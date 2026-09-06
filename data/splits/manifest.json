@@ -1,0 +1,66 @@
+{
+  "source_rows": 1511,
+  "method": "chronological, no shuffling; validation is the most recent slice",
+  "fractions": {
+    "train": 0.7,
+    "test": 0.2,
+    "validation": 0.1
+  },
+  "paper_train_end": "2020-11-15",
+  "splits": {
+    "train": {
+      "rows": 1057,
+      "pct": 70.0,
+      "start": "2016-01-04",
+      "end": "2020-03-16",
+      "files": {
+        "daily": {
+          "path": "data/splits/train/TSLA_daily_train.csv",
+          "rows": 1057,
+          "sha256_16": "a1b653205d79b8f1"
+        },
+        "first15": {
+          "path": "data/splits/train/TSLA_first15_train.csv",
+          "rows": 1057,
+          "sha256_16": "216ad71ff1d55093"
+        }
+      }
+    },
+    "test": {
+      "rows": 302,
+      "pct": 20.0,
+      "start": "2020-03-17",
+      "end": "2021-05-26",
+      "files": {
+        "daily": {
+          "path": "data/splits/test/TSLA_daily_test.csv",
+          "rows": 302,
+          "sha256_16": "14c304e9149c0c1e"
+        },
+        "first15": {
+          "path": "data/splits/test/TSLA_first15_test.csv",
+          "rows": 302,
+          "sha256_16": "3658fee097a64c9c"
+        }
+      }
+    },
+    "validation": {
+      "rows": 152,
+      "pct": 10.1,
+      "start": "2021-05-27",
+      "end": "2021-12-31",
+      "files": {
+        "daily": {
+          "path": "data/splits/HOLDOUT_validation/TSLA_daily_validation.csv",
+          "rows": 152,
+          "sha256_16": "6187d7961a3edc17"
+        },
+        "first15": {
+          "path": "data/splits/HOLDOUT_validation/TSLA_first15_validation.csv",
+          "rows": 152,
+          "sha256_16": "5806711c1994fc9c"
+        }
+      }
+    }
+  }
+}
