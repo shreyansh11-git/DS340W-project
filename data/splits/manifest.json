@@ -17,12 +17,12 @@
         "daily": {
           "path": "data/splits/train/TSLA_daily_train.csv",
           "rows": 1057,
-          "sha256_16": "a1b653205d79b8f1"
+          "sha256_16": "d65cc81669facddd"
         },
         "first15": {
           "path": "data/splits/train/TSLA_first15_train.csv",
           "rows": 1057,
-          "sha256_16": "216ad71ff1d55093"
+          "sha256_16": "190ece152dfcf82d"
         }
       }
     },
@@ -35,12 +35,12 @@
         "daily": {
           "path": "data/splits/test/TSLA_daily_test.csv",
           "rows": 302,
-          "sha256_16": "14c304e9149c0c1e"
+          "sha256_16": "abde657de97e4b3a"
         },
         "first15": {
           "path": "data/splits/test/TSLA_first15_test.csv",
           "rows": 302,
-          "sha256_16": "3658fee097a64c9c"
+          "sha256_16": "5f4f48ee14cc208c"
         }
       }
     },
@@ -53,12 +53,12 @@
         "daily": {
           "path": "data/splits/HOLDOUT_validation/TSLA_daily_validation.csv",
           "rows": 152,
-          "sha256_16": "6187d7961a3edc17"
+          "sha256_16": "ef1a5ff8af311f23"
         },
         "first15": {
           "path": "data/splits/HOLDOUT_validation/TSLA_first15_validation.csv",
           "rows": 152,
-          "sha256_16": "5806711c1994fc9c"
+          "sha256_16": "8efac39a5dda97ee"
         }
       }
     }
