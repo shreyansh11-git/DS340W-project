@@ -95,6 +95,7 @@ val   = load_split("validation")             # raises — held out by design
 
 ```
 DATA.md                   dataset documentation and provenance
+phase1-original-code/     the authors' published notebook, made runnable (see its README)
 src/fetch_data.py         Alpaca download, both arms
 src/adjust_prices.py      split adjustment with verification
 src/make_splits.py        chronological splitting
@@ -107,7 +108,8 @@ results/                  tables and figures (generated)
 - [x] Parent paper selected
 - [x] Data source identified, access verified, datasets downloaded
 - [x] Train / test / validation splits
-- [ ] Phase 1 — reproduce the paper
+- [x] Phase 1a — executed the authors' published code (see phase1-original-code/)
+- [ ] Phase 1b — full reproduction of the paper's method
 - [ ] Phase 2 — extension
 
 ## Note on tooling

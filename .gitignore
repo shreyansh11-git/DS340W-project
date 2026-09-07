@@ -1,7 +1,18 @@
+# secrets - never commit
+.env
+
+# python
 __pycache__/
 *.pyc
 .venv/
-.env
 .ipynb_checkpoints/
+
+# generated at runtime by the notebook's plotting cell
+temp-plot.html
+
+# build artefacts
+*.zip
+
+# generated results
 results/*
 !results/.gitkeep
