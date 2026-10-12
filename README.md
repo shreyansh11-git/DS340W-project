@@ -115,3 +115,26 @@ results/                  tables and figures (generated)
 ## Note on tooling
 Portions of this repository were developed with AI assistance (Claude), which is permitted
 for this course. Commits carrying a `Co-Authored-By: Claude` trailer indicate that.
+
+---
+
+## Progress since check-in 2 (October 2026)
+
+### 1. Correct-and-quantify: lagged vs lookahead features (Khan et al.)
+`src/khan_features.py` builds the nine Table 2 features (RSI 14, SMA 50, ADX 20, volume,
+correlation 24, momentum 20, and the three "Previous" price differences) in plain pandas.
+`experiments/khan_lag_vs_lookahead.py` trains all nine Table 3 models with the Table 7 grids
+(GridSearchCV, time-series CV, Min-Max scaler fit on train only) under three versions of the
+"Previous" features: lagged (the paper), same-day, and forward-shifted (the authors' notebook).
+Results: `results/khan_lag_vs_lookahead.md`.
+
+    python experiments/khan_lag_vs_lookahead.py
+
+### 2. Parent paper 3: intraday time series momentum (Li, Sakkas & Urquhart, 2022)
+`src/fetch_intraday.py` downloads 30-minute bars from Alpaca; `experiments/itsm_replication.py`
+runs the paper's in-sample regression (Newey-West), expanding-window out-of-sample test
+(R2_OOS, Clark-West) and the long/short last-half-hour timing rule, gross and net of costs.
+
+    pip install alpaca-py pandas numpy
+    python src/fetch_intraday.py SPY 2016-01-01 2025-12-31
+    python experiments/itsm_replication.py data/intraday/SPY_30min_2016_2025.csv

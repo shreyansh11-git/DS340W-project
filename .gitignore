@@ -16,3 +16,8 @@ temp-plot.html
 # generated results
 results/*
 !results/.gitkeep
+!results/*.md
+!results/khan_lag_vs_lookahead.csv
+
+# downloaded intraday bars (re-create with src/fetch_intraday.py)
+data/intraday/
